@@ -7,13 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Presentation Layer", "1-P
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Repository Layer", "2-Repository Layer", "{A2117AFB-7D7E-4585-9001-57267553CB61}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-External", "4-External", "{E4E07A87-2FBE-4EF7-87E1-8E325D15342B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-External", "3-External", "{E4E07A87-2FBE-4EF7-87E1-8E325D15342B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-APY-KEY", "3-APY-KEY", "{023BC6AA-1DFB-4B97-B57A-07DC537775CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioTarget.Presentation", "DesafioTarget.Presentation\DesafioTarget.Presentation.csproj", "{417B2070-517E-478D-8784-D5AA332E41B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioTarget.Presentation", "DesafioTarget.Presentation\DesafioTarget.Presentation.csproj", "{417B2070-517E-478D-8784-D5AA332E41B0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioTarget.Repository", "DesafioTarget.Repository\DesafioTarget.Repository.csproj", "{3E0ABE0E-7B63-4DB4-9ED4-7EC1AF35297B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioTarget.Repository", "DesafioTarget.Repository\DesafioTarget.Repository.csproj", "{3E0ABE0E-7B63-4DB4-9ED4-7EC1AF35297B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
