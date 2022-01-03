@@ -1,0 +1,13 @@
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\obj\Debug\netcoreapp3.1\DesafioTarget.Repository.csproj.AssemblyReference.cache
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\obj\Debug\netcoreapp3.1\DesafioTarget.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\obj\Debug\netcoreapp3.1\DesafioTarget.Repository.AssemblyInfoInputs.cache
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\obj\Debug\netcoreapp3.1\DesafioTarget.Repository.AssemblyInfo.cs
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\obj\Debug\netcoreapp3.1\DesafioTarget.Repository.csproj.CoreCompileInputs.cache
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\bin\Debug\netcoreapp3.1\DesafioTarget.Repository.deps.json
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\bin\Debug\netcoreapp3.1\DesafioTarget.Repository.runtimeconfig.json
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\bin\Debug\netcoreapp3.1\DesafioTarget.Repository.runtimeconfig.dev.json
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\bin\Debug\netcoreapp3.1\DesafioTarget.Repository.dll
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\bin\Debug\netcoreapp3.1\DesafioTarget.Repository.pdb
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\obj\Debug\netcoreapp3.1\DesafioTarget.Repository.dll
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\obj\Debug\netcoreapp3.1\DesafioTarget.Repository.pdb
+C:\Projetos\DesafioTargetBank\DesafioTarget\DesafioTarget.Repository\obj\Debug\netcoreapp3.1\DesafioTarget.Repository.genruntimeconfig.cache
