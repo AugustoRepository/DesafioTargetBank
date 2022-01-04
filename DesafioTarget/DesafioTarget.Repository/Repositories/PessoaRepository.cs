@@ -19,9 +19,9 @@ namespace DesafioTarget.Repository.Repositories
         }
         public void Insert(Pessoa obj)
         {
-            var query = "INSERT  INTO PESSOA(NOME_COMPLETO, CPF, DATA_NASCIMENTO," +
+            var query = "INSERT INTO PESSOA(NOME_COMPLETO, CPF, DATA_NASCIMENTO," +
                 "DATA_CADASTRO, RENDA_MENSAL)" +
-                "VALUES (@NOME_COMPLETO, @CPF, @DATA_NASCIMENTO," +
+                "VALUES (@NOME_COMPLETO, @CPF, @DATA_NASCIMENTO, " +
                 "@DATA_CADASTRO, @RENDA_MENSAL)";
             using (var connection = new SqlConnection(_connectionString))
             {
@@ -32,7 +32,7 @@ namespace DesafioTarget.Repository.Repositories
 
         public void Update(Pessoa obj)
         {
-            var query = "UPDATE PESSOA SET NOME = @NOME, CPF = @CPF," +
+            var query = "UPDATE PESSOA SET NOME_COMPLETO = @NOME_COMPLETO, CPF = @CPF," +
                 " DATA_NASCIMENTO = @DATA_NASCIMENTO, DATA_CADASTRO = @DATA_CADASTRO" +
                 "RENDA_MENSAL = @RENDA_MENSAL WHERE PESSOA_ID = @PESSOA_ID";
             using (var connection = new SqlConnection(_connectionString))
@@ -52,7 +52,7 @@ namespace DesafioTarget.Repository.Repositories
 
         public List<Pessoa> GetAll()
         {
-            var query = "SELECT * FROM PESSOA";
+            var query = "SELECT *FROM PESSOA";
             using (var connection = new SqlConnection(_connectionString))
             {
                  return connection.Query<Pessoa>(query).ToList();
@@ -61,10 +61,10 @@ namespace DesafioTarget.Repository.Repositories
 
         public Pessoa GetById(int id)
         {
-            var query = "SELECT * FROM PESSOA WHERE PESSOA_ID = @PESSOA_ID";
+            var query = "SELECT *FROM PESSOA WHERE PESSOA_ID = @Pesssoa_ID";
             using (var connection = new SqlConnection(_connectionString))
             {
-                return connection.Query<Pessoa>(query, new { PesssoaID = id })
+                return connection.Query<Pessoa>(query, new { Pesssoa_ID = id })
                     .FirstOrDefault();
             }
         }
