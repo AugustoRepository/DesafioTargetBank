@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace DesafioTarget.Repository.Entities
+namespace DesafioTarget.Presentation.Models.Endereco
 {
-    public class Endereco
+    public class GetEnderecoModel
     {
         public int EnderecoId { get; set; }
         public string Logradouro { get; set; }
@@ -14,9 +15,5 @@ namespace DesafioTarget.Repository.Entities
         public string Complemento { get; set; }
         public string Bairro { get; set; }
         public int PessoaID { get; set; }
-
-        #region Relacionamentos
-        public Pessoa Pessoa { get; set; }
-        #endregion
     }
 }
