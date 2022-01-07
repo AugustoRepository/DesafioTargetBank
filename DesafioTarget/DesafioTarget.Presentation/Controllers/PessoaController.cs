@@ -1,4 +1,5 @@
 ﻿using DesafioTarget.Presentation.Models.Pessoa;
+using DesafioTarget.Presentation.Security;
 using DesafioTarget.Repository.Entities;
 using DesafioTarget.Repository.Repositories;
 using Microsoft.AspNetCore.Http;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace DesafioTarget.Presentation.Controllers
 {
+    [ApiKey]
     [Route("api/[controller]")]
     [ApiController]
     public class PessoaController : ControllerBase

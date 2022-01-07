@@ -37,6 +37,15 @@ namespace DesafioTarget.Presentation
                     Version = "v1",                    
                 });
                 s.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+                s.AddSecurityDefinition(
+            "bearer",
+            new ApiKeyScheme
+            {
+                In = "header",
+                Description = "Autenticação baseada em Json Web Token (JWT)",
+                Name = "Authorization",
+                Type = "apiKey"
+            });
             });
             #endregion
             var connectionString = Configuration.GetConnectionString("TargetBankBd");
@@ -60,6 +69,8 @@ namespace DesafioTarget.Presentation
             app.UseRouting();
 
             app.UseAuthorization();
+
+            
 
             app.UseSwagger();
             app.UseSwaggerUI(s =>
