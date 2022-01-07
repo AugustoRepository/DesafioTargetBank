@@ -1,4 +1,5 @@
 ﻿using DesafioTarget.Presentation.Models.Endereco;
+using DesafioTarget.Presentation.Security;
 using DesafioTarget.Repository.Entities;
 using DesafioTarget.Repository.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace DesafioTarget.Presentation.Controllers
 {
+    [ApiKey]
     [Route("api/[controller]")]
     [ApiController]
     public class EnderecoController : ControllerBase
