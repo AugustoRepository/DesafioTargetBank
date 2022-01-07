@@ -28,8 +28,9 @@ namespace DesafioTarget.Presentation.Controllers
                 endereco.Uf = model.Uf;
                 endereco.Complemento = model.Complemento;
                 endereco.Bairro = model.Bairro;
-                endereco.PessoaID = model.PessoaID;
+                endereco.Pessoa_ID = model.PessoaID;
 
+                enderecoRepository.Update(endereco);
                 return Ok("Endereco cadastrado com sucesso");
             }
             catch (Exception e)
@@ -53,12 +54,19 @@ namespace DesafioTarget.Presentation.Controllers
                     endereco.Uf = model.Uf;
                     endereco.Complemento = model.Complemento;
                     endereco.Bairro = model.Bairro;
-                    endereco.PessoaID = model.PessoaID;
+                    endereco.Pessoa_ID = model.PessoaID;
+
+                    enderecoRepository.Update(endereco);
+
+                    return Ok("Endereco atualizado com sucesso");
+                }
+                else
+                {
+                    return StatusCode(400, "Endereco nao cadastrada no sistema");
                 }
 
-                return Ok("Endereco atualizado com sucesso");
             }
-            catch (Exception e)
+             catch (Exception e)
             {
                 return StatusCode(500, "Ocorreu um erro: " + e.Message);
             }
@@ -99,14 +107,14 @@ namespace DesafioTarget.Presentation.Controllers
                 foreach (var item in consulta)
                 {
                     var model = new GetEnderecoModel();
-                    model.EnderecoId = item.EnderecoId;
+                    model.EnderecoId = item.Endereco_Id;
                     model.Logradouro = item.Logradouro;
                     model.Cep = item.Cep;
                     model.Cidade = item.Cidade;
                     model.Uf = item.Uf;
                     model.Complemento = item.Complemento;
                     model.Bairro = item.Bairro;
-                    model.PessoaID = item.PessoaID;
+                    model.PessoaID = item.Pessoa_ID;
                    
                     result.Add(model);
                 }
@@ -127,14 +135,14 @@ namespace DesafioTarget.Presentation.Controllers
                 if (endereco != null)
                 {
                     var model = new GetEnderecoModel();
-                    model.EnderecoId = endereco.EnderecoId;
+                    model.EnderecoId = endereco.Endereco_Id;
                     model.Logradouro = endereco.Logradouro;
                     model.Cep = endereco.Cep;
                     model.Cidade = endereco.Cidade;
                     model.Uf = endereco.Uf;
                     model.Complemento = endereco.Complemento;
                     model.Bairro = endereco.Bairro;
-                    model.PessoaID = endereco.PessoaID;
+                    model.PessoaID = endereco.Pessoa_ID;
                     return Ok(model);
                 }
                 else

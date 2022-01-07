@@ -19,8 +19,8 @@ namespace DesafioTarget.Repository.Repositories
         }
         public void Insert(Endereco obj)
         {
-            var query = "INSERT INTO ENDERECO(LOGRADOURO, CEP, CIDADE, UF, COMPLEMENTO,PESSOA_ID" +
-                "VALUES (@LOGRADOURO, @CEP, @CIDADE, @UF, @COMPLEMENTO ,@PESSOA_ID)";
+            var query = "INSERT INTO ENDERECO(LOGRADOURO, CEP, CIDADE, UF, COMPLEMENTO,PESSOA_ID, BAIRRO)" +
+                "VALUES (@LOGRADOURO, @CEP, @CIDADE, @UF, @COMPLEMENTO ,@PESSOA_ID, @BAIRRO)";
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Execute(query, obj);
@@ -29,8 +29,8 @@ namespace DesafioTarget.Repository.Repositories
         }
         public void Update(Endereco obj)
         {
-            var query = "UPDATE ENDERECO SET LOGRADOURO = @LOGRADOURO, CEP =@CEP, UF = @UF, COMPLEMENTO =@COMPLEMENTO, PESSOA_ID =@ PESSOA=ID" +
-                "WHERE ENDERECO_ID = @ENDERECO_ID";
+            var query = "UPDATE ENDERECO SET LOGRADOURO = @LOGRADOURO, CEP =@CEP, UF = @UF, COMPLEMENTO =@COMPLEMENTO, PESSOA_ID = @PESSOA=ID, BAIRRO = @BAIRRO" +
+                "WHERE ENDERECO_ID = @ENDERECO_ID AND PESSOA_ID = @PESSOA_ID";
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Execute(query, obj);
@@ -40,7 +40,7 @@ namespace DesafioTarget.Repository.Repositories
 
         public void Excluir(Endereco obj)
         {
-            var query = "DELETE FROM PESSOA WHERE ENDERECO_ID =@ENDERECO_ID";
+            var query = "DELETE FROM ENDERECO WHERE ENDERECO_ID = @ENDERECO_ID";
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Execute(query, obj);
@@ -63,7 +63,7 @@ namespace DesafioTarget.Repository.Repositories
             var query = "SELECT * FROM ENDERECO WHERE ENDERECO_ID = @ENDERECO_ID";
             using (var connection = new SqlConnection(_connectionString))
             {
-                return connection.Query<Endereco>(query,new { EnderecoID = id})
+                return connection.Query<Endereco>(query,new { Endereco_ID = id})
                     .FirstOrDefault();
 
             }
