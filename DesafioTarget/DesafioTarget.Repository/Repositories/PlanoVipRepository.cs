@@ -19,8 +19,8 @@ namespace DesafioTarget.Repository.Repositories
         }
         public void Insert(PlanoVip obj)
         {
-            var query = "INSERT INT PLANO_VIP (VALOR, VIP_ATIVO, PESSOA_ID)" +
-                "VALUES (@VALOR, TRUE, @PESSOA_ID)";
+            var query = "INSERT INTO PLANO_VIP (VALOR, VIP_ATIVO, PESSOA_ID)" +
+                "VALUES (@VALOR, @VIP_ATIVO, @PESSOA_ID)";
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Execute(query, obj);
@@ -30,7 +30,7 @@ namespace DesafioTarget.Repository.Repositories
 
         public void Update(PlanoVip obj)
         {
-            var query = "UPDATE INTO PLANO_VIP SET VALOR = @VALOR, VIP_ATIVO = @VIP_ATIVO, PESSOA_ID = @PESSOA_ID";
+            var query = "UPDATE PLANO_VIP SET VALOR = @VALOR, VIP_ATIVO = @VIP_ATIVO, PLANO_VIP_ID = @PLANO_VIP_ID";
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Execute(query, obj);
@@ -40,7 +40,7 @@ namespace DesafioTarget.Repository.Repositories
 
         public void Excluir(PlanoVip obj)
         {
-            var query = "DELETE FROM PLANO_VIP WHERE PLANO_ID = @PLANO_ID";
+            var query = "DELETE FROM PLANO_VIP WHERE PLANO_VIP_ID = @PLANO_VIP_ID";
             using (var connection = new SqlConnection(_connectionString))
             {
                
@@ -61,7 +61,7 @@ namespace DesafioTarget.Repository.Repositories
 
         public PlanoVip GetById(int id)
         {
-            var query = "SELECT * FROM PLANO_VIP WHERE PALNO_ID = PLANO_ID";
+            var query = "SELECT * FROM PLANO_VIP WHERE PLANO_VIP_ID = @PLANO_VIP_ID";
 
             using (var connection = new SqlConnection(_connectionString))
             {

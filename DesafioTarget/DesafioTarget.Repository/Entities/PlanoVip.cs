@@ -6,11 +6,11 @@ namespace DesafioTarget.Repository.Entities
 {
     public class PlanoVip
     {
-        public int PlanoVipId { get; set; }
-        public int PessoaId { get; set; }
+        public int Plano_Vip_Id { get; set; }
+        public int Pessoa_Id { get; set; }
         public float Valor { get; set; }
 
-        public bool VipAtivo { get; set; }
+        public bool Vip_Ativo { get; set; }
         #region Relacionamentos
         public List<Pessoa> Pessoas { get; set; }
         #endregion

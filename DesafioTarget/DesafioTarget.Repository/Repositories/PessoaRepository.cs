@@ -33,7 +33,7 @@ namespace DesafioTarget.Repository.Repositories
         public void Update(Pessoa obj)
         {
             var query = "UPDATE PESSOA SET NOME_COMPLETO = @NOME_COMPLETO, CPF = @CPF," +
-                " DATA_NASCIMENTO = @DATA_NASCIMENTO, DATA_CADASTRO = @DATA_CADASTRO" +
+                " DATA_NASCIMENTO = @DATA_NASCIMENTO, DATA_CADASTRO = @DATA_CADASTRO," +
                 "RENDA_MENSAL = @RENDA_MENSAL WHERE PESSOA_ID = @PESSOA_ID";
             using (var connection = new SqlConnection(_connectionString))
             {

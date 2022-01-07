@@ -22,9 +22,9 @@ namespace DesafioTarget.Presentation.Controllers
             {
                 var planoVip = new PlanoVip();
 
-                planoVip.PessoaId = model.PessoaId;
-                planoVip.Valor = 50;
-                planoVip.VipAtivo = true;
+                planoVip.Pessoa_Id = model.PessoaId;
+                planoVip.Valor = model.Valor;
+                planoVip.Vip_Ativo = model.VipAtivo;
 
                 planoVipRepository.Insert(planoVip);
                 return Ok("Cliente aderiu plano vip");
@@ -43,8 +43,8 @@ namespace DesafioTarget.Presentation.Controllers
                 var planoVip = planoVipRepository.GetById(model.PlanoVipId);
                 if (planoVip != null)
                 {
-                    planoVip.PessoaId = model.PessoaId;
-                    planoVip.VipAtivo = model.VipAtivo;
+                    planoVip.Pessoa_Id = model.PessoaId;
+                    planoVip.Vip_Ativo = model.VipAtivo;
                     planoVip.Valor = model.Valor;
 
                     return Ok("Plano Vip Altereado com sucesso");
@@ -93,10 +93,10 @@ namespace DesafioTarget.Presentation.Controllers
                 foreach(var item in consulta)
                 {
                     var model = new GetPlanoVip();
-                    model.PlanoVipId = item.PlanoVipId;
-                    model.PessoaId = item.PessoaId;
+                    model.PlanoVipId = item.Plano_Vip_Id;
+                    model.PessoaId = item.Pessoa_Id;
                     model.Valor = item.Valor;
-                    model.VipAtivo = item.VipAtivo;                    
+                    model.VipAtivo = item.Vip_Ativo;                    
                     result.Add(model);
                 }
                 return Ok(result);
@@ -116,10 +116,10 @@ namespace DesafioTarget.Presentation.Controllers
                 if (planoVip != null)
                 {
                     var model = new GetPlanoVip();
-                    model.PlanoVipId = planoVip.PlanoVipId;
-                    model.PessoaId = planoVip.PessoaId;
+                    model.PlanoVipId = planoVip.Plano_Vip_Id;
+                    model.PessoaId = planoVip.Pessoa_Id;
                     model.Valor = planoVip.Valor;
-                    model.VipAtivo = planoVip.VipAtivo;
+                    model.VipAtivo = planoVip.Vip_Ativo;
                     return Ok(model);
                 }
                 else
